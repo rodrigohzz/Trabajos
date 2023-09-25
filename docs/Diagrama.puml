@@ -1,0 +1,66 @@
+@startuml Bomberman
+
+class Bomberman
+class Personaje
+class Bomba
+class Pared
+class Fija
+class Destruible
+class Mejora
+class Enemigo
+class Salida
+class Valcom
+class Oneal
+class Dahl
+class Minvo
+class Ovape
+class Doria
+class Pass
+class Pontan
+class MejoraBomba
+class Fuego
+class Detonador
+class Patineta
+class Muro
+class SignoInterrogacion
+class Llama
+class ExtraVida
+class FireSuit
+class Heart
+class Up
+
+Bomberman *-- Personaje
+Bomberman *-- Enemigo
+Bomberman *-- Pared
+
+Fija --|> Pared
+Destruible --|> Pared
+
+Valcom --|> Enemigo
+Oneal --|> Enemigo
+Dahl --|> Enemigo
+Minvo --|> Enemigo
+Ovape --|> Enemigo
+Doria --|> Enemigo
+Pass --|> Enemigo
+Pontan --|> Enemigo
+
+Personaje o-- Mejora
+Personaje o-- Bomba
+Personaje o-- Salida
+
+MejoraBomba --|> Mejora
+Fuego --|> Mejora
+Detonador --|> Mejora
+Patineta --|> Mejora
+Muro --|> Mejora
+SignoInterrogacion --|> Mejora
+Llama --|> Mejora
+ExtraVida --|> Mejora
+
+FireSuit --|> ExtraVida
+Heart --|> ExtraVida
+1up --|> ExtraVida
+
+Bomba o-- Destruible
+Bomba o-- Enemigo
