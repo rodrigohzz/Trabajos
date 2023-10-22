@@ -1,4 +1,7 @@
-class Oneal
+#pragma once
+#include <Enemigo.hpp>
+
+class Oneal : public Enemigo
 {
 private:
     /* data */

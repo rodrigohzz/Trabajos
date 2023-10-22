@@ -1,4 +1,7 @@
-class Dahl
+#pragma once
+#include <Enemigo.hpp>
+
+class Dahl : public Enemigo
 {
 private:
     /* data */

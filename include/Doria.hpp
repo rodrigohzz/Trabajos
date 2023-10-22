@@ -1,4 +1,7 @@
-class Doria
+#pragma once
+#include <Enemigo.hpp>
+
+class Doria : public Enemigo
 {
 private:
     /* data */

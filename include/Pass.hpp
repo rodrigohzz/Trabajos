@@ -1,3 +1,6 @@
+#pragma once
+#include <Enemigo.hpp>
+
 class Pass
 {
 private:

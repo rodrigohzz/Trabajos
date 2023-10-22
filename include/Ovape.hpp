@@ -1,4 +1,7 @@
-class Ovape
+#pragma once
+#include <Enemigo.hpp>
+
+class Ovape : public Enemigo
 {
 private:
     /* data */
