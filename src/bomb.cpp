@@ -4,50 +4,56 @@
 #include <Ventana.hpp>
 #include <Bomberman.hpp>
 #include <Bomba.hpp>
+#include <Logo.hpp>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
     Ventana ventana;
+    Logo *logo = new Logo();
+
     Bomberman *bomberman = new Bomberman(0, 0);
 
     Bomba *bomba = new Bomba();
 
     list<Dibujo *> dibujos;
     dibujos.push_back(logo);
+
+    int key = getch();
+    if (key == 'c' || key == 'Q')
+    {
+        /* code */
+    }
+    
+
     dibujos.push_back(bomberman);
     dibujos.push_back(bomba);
 
     list<Actualizable *> actualizables;
-    actualizables.push_back(logo);
     actualizables.push_back(bomberman);
 
     while (true)
     {
-
         int key = getch();
-        if (key == 't' || key == 'T')
-        {
-            if (key == 'q' || key == 'Q')
-                break;
+        if (key == 'q' || key == 'Q')
+            break;
 
-            if (key == 'a' || key == KEY_LEFT)
-            {
-                bomberman->DesplazarIzquierda();
-            }
-            if (key == 'd' || key == KEY_RIGHT)
-            {
-                bomberman->DesplazarDerecha();
-            }
-            if (key == 'w' || key == KEY_UP)
-            {
-                bomberman->DesplazarArriba();
-            }
-            if (key == 's' || key == KEY_DOWN)
-            {
-                bomberman->DesplazarAbajo();
-            }
+        if (key == 'a' || key == KEY_LEFT)
+        {
+            bomberman->DesplazarIzquierda();
+        }
+        if (key == 'd' || key == KEY_RIGHT)
+        {
+            bomberman->DesplazarDerecha();
+        }
+        if (key == 'w' || key == KEY_UP)
+        {
+            bomberman->DesplazarArriba();
+        }
+        if (key == 's' || key == KEY_DOWN)
+        {
+            bomberman->DesplazarAbajo();
         }
 
         refresh();
