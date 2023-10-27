@@ -20,22 +20,18 @@ int main(int argc, char const *argv[])
     list<Dibujo *> dibujos;
     dibujos.push_back(logo);
 
-    int key = getch();
-    if (key == 'c' || key == 'Q')
-    {
-        /* code */
-    }
-    
-
-    dibujos.push_back(bomberman);
-    dibujos.push_back(bomba);
-
     list<Actualizable *> actualizables;
     actualizables.push_back(bomberman);
 
     while (true)
     {
         int key = getch();
+        if (key == 'c' || key == 'C')
+        {
+            
+            dibujos.push_back(bomberman);
+            dibujos.push_back(bomba);
+        }
         if (key == 'q' || key == 'Q')
             break;
 
