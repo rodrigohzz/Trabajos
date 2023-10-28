@@ -27,7 +27,10 @@ class Llama
 class ExtraVida
 class FireSuit
 class Heart
-class 1up
+class Up
+class Dibujo
+class Logo
+class 
 
 Bomberman *-- Personaje
 Bomberman *-- Enemigo

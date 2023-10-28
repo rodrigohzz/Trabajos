@@ -31,6 +31,8 @@ int main(int argc, char const *argv[])
             
             dibujos.push_back(bomberman);
             dibujos.push_back(bomba);
+            dibujos.remove(logo);
+            clear();
         }
         if (key == 'q' || key == 'Q')
             break;
