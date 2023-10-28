@@ -1,0 +1,15 @@
+@startuml Bomberman
+
+class Actualizable
+class Bomba
+class Bomberman
+class Dibujo
+class Logo
+class Ventana
+
+Actualizable <-- Ventana
+Actualizable <-- Dibujo
+Dibujo <-- Bomberman
+Dibujo <-- Bomba
+Dibujo <-- Logo
+Bomba --o Bomberman
