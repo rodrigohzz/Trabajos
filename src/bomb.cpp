@@ -30,13 +30,20 @@ int main(int argc, char const *argv[])
         {
             
             dibujos.push_back(bomberman);
-            dibujos.push_back(bomba);
             dibujos.remove(logo);
             clear();
         }
         if (key == 'q' || key == 'Q')
             break;
-
+        if (key == 'b' || key == 'B')
+        {
+            dibujos.push_back(bomba);
+        }
+        if (key == 'r' || key == 'R')
+        {
+            dibujos.remove(bomba);
+            clear();
+        }
         if (key == 'a' || key == KEY_LEFT)
         {
             bomberman->DesplazarIzquierda();
